@@ -17,7 +17,7 @@
 <meta property="og:description" content="在过去的一年中React Native经历了从v0.40到v0.52的十几次的版本迭代，我们看到在这十几次的版本迭代中React Native的组件库在不断地壮大，在新引进的组件中既有FlatList、SectionList等具有更高性能的列表组件，也有与时俱进的用于适配全屏幕的SafeAreaView组件，同时呢，一些性能较差、无法适应React Native未来发展的一些老的组件，如：List">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://raw.githubusercontent.com/zjhzxy/Pic/master/React-Native-Annual-Report-2017-2018.png">
-<meta property="og:updated_time" content="2018-05-16T05:35:42.849Z">
+<meta property="og:updated_time" content="2018-05-16T06:32:22.996Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native 2017-2018 年度报告">
 <meta name="twitter:description" content="在过去的一年中React Native经历了从v0.40到v0.52的十几次的版本迭代，我们看到在这十几次的版本迭代中React Native的组件库在不断地壮大，在新引进的组件中既有FlatList、SectionList等具有更高性能的列表组件，也有与时俱进的用于适配全屏幕的SafeAreaView组件，同时呢，一些性能较差、无法适应React Native未来发展的一些老的组件，如：List">
@@ -194,7 +194,7 @@
 <tr>
 <th>组件</th>
 <th style="text-align:center">最低支持版本</th>
-<th style="text-align:center">说明 </th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
 <tbody>
@@ -237,6 +237,47 @@
 <td><a href="https://github.com/facebook/react-native/commit/983b05441d3d23809b924de2e4bf96a55c47428d" target="_blank" rel="noopener">SafeAreaView</a></td>
 <td style="text-align:center">0.50</td>
 <td style="text-align:center">用于包裹其他View，它会自动应用填充布局中不足的一部分，但不包括navigation bars, tab bars, toolbars等视图</td>
+</tr>
+</tbody>
+</table>
+<h3 id="新增API说明"><a href="#新增API说明" class="headerlink" title="新增API说明"></a>新增API说明</h3><table>
+<thead>
+<tr>
+<th>组件</th>
+<th style="text-align:center">支持最低版本</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://facebook.github.io/react-native/docs/accessibilityinfo.html" target="_blank" rel="noopener">AccessibilityInfo</a></td>
+<td style="text-align:center">0.47</td>
+<td style="text-align:center">一个用于判断屏幕阅读器是否处于激活状态的API</td>
+</tr>
+<tr>
+<td><a href="https://github.com/facebook/react-native/commit/95c192619372e6b3dfdc55aeafa8f44faf013ecf" target="_blank" rel="noopener">DeviceInfo</a></td>
+<td style="text-align:center">0.44</td>
+<td style="text-align:center">一个类专门提供屏幕尺寸，字体缩放等信息的API</td>
+</tr>
+<tr>
+<td><a href="https://facebook.github.io/react-native/docs/backhandler.html#docsNav" target="_blank" rel="noopener">BackHandler</a></td>
+<td style="text-align:center">0.44</td>
+<td style="text-align:center">监听设备上的后退按钮事件(Android、Apple TV)</td>
+</tr>
+<tr>
+<td><a href="https://facebook.github.io/react-native/docs/direct-manipulation.html#other-native-methods" target="_blank" rel="noopener">findNodeHandle</a></td>
+<td style="text-align:center">0.45</td>
+<td style="text-align:center">用于获取组件的本地节点句柄的API</td>
+</tr>
+<tr>
+<td><a href="https://facebook.github.io/react-native/docs/building-for-apple-tv.html#code-changes" target="_blank" rel="noopener">TVEventHandler</a></td>
+<td style="text-align:center">0.43</td>
+<td style="text-align:center">一个用于接受Apple TV远程事件(如遥控器的事件)的API</td>
+</tr>
+<tr>
+<td><a href="https://facebook.github.io/react-native/docs/debugging.html#in-app-errors-and-waReact Nativeings" target="_blank" rel="noopener">YellowBox</a></td>
+<td style="text-align:center">0.44</td>
+<td style="text-align:center">通过这个API可以屏蔽指定的警告</td>
 </tr>
 </tbody>
 </table>
