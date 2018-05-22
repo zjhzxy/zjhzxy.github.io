@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="RN anywhere">
 <meta property="og:description" content="返回栈Android中的活动是可以层叠的，我们每启动一个新的活动，就会覆盖在原活动之上，然后点击Back键会销毁最上面的活动，下面的一个活动就会重新显示出来。 Android 是使用任务（Task）来管理活动的，一个任务就是一组存放在栈里的活动 的集合，这个栈也被称作返回栈（Back Stack）。栈是一种后进先出的数据结构，在默认情况 下，每当我们启动了一个新的活动，它会在返回栈中入栈，并处于栈">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://images2015.cnblogs.com/blog/15207/201512/15207-20151230134258557-1078207626.jpg">
-<meta property="og:image" content="https://images2015.cnblogs.com/blog/15207/201512/15207-20151230134402026-2097191680.jpg">
-<meta property="og:updated_time" content="2018-05-22T09:21:10.654Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/zjhzxy/Pic/master/%E8%BF%94%E5%9B%9E%E6%A0%88.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/zjhzxy/Pic/master/Android%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg">
+<meta property="og:updated_time" content="2018-05-22T09:25:16.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Activity活动的生命周期">
 <meta name="twitter:description" content="返回栈Android中的活动是可以层叠的，我们每启动一个新的活动，就会覆盖在原活动之上，然后点击Back键会销毁最上面的活动，下面的一个活动就会重新显示出来。 Android 是使用任务（Task）来管理活动的，一个任务就是一组存放在栈里的活动 的集合，这个栈也被称作返回栈（Back Stack）。栈是一种后进先出的数据结构，在默认情况 下，每当我们启动了一个新的活动，它会在返回栈中入栈，并处于栈">
-<meta name="twitter:image" content="https://images2015.cnblogs.com/blog/15207/201512/15207-20151230134258557-1078207626.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/zjhzxy/Pic/master/%E8%BF%94%E5%9B%9E%E6%A0%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="RN anywhere" type="application/atom+xml">
   
@@ -211,8 +211,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="返回栈"><a href="#返回栈" class="headerlink" title="返回栈"></a>返回栈</h3><p>Android中的活动是可以层叠的，我们每启动一个新的活动，就会覆盖在原活动之上，然后点击Back键会销毁最上面的活动，下面的一个活动就会重新显示出来。</p>
-<p>Android 是使用任务（Task）来管理活动的，一个任务就是一组存放在栈里的活动 的集合，这个栈也被称作返回栈（Back Stack）。栈是一种后进先出的数据结构，在默认情况 下，每当我们启动了一个新的活动，它会在返回栈中入栈，并处于栈顶的位置。而每当我们 按下 Back 键或调用 finish()方法去销毁一个活动时，处于栈顶的活动会出栈，这时前一个入 栈的活动就会重新处于栈顶的位置。系统总是会显示处于栈顶的活动给用户。<br><a id="more"></a></p>
-<p><img src="https://images2015.cnblogs.com/blog/15207/201512/15207-20151230134258557-1078207626.jpg" alt="image"></p>
+<p>Android 是使用任务（Task）来管理活动的，一个任务就是一组存放在栈里的活动 的集合，这个栈也被称作返回栈（Back Stack）。栈是一种后进先出的数据结构，在默认情况 下，每当我们启动了一个新的活动，它会在返回栈中入栈，并处于栈顶的位置。而每当我们 按下 Back 键或调用 finish()方法去销毁一个活动时，处于栈顶的活动会出栈，这时前一个入 栈的活动就会重新处于栈顶的位置。系统总是会显示处于栈顶的活动给用户。<br><a id="more"></a><br><img src="https://raw.githubusercontent.com/zjhzxy/Pic/master/%E8%BF%94%E5%9B%9E%E6%A0%88.jpg" alt="image"></p>
 <h3 id="活动的状态"><a href="#活动的状态" class="headerlink" title="活动的状态"></a>活动的状态</h3><p>每个活动在其生命周期中最多可能会有四种状态。</p>
 <p>1、运行状态</p>
 <p>当一个活动位于返回栈的栈顶时，这时活动就处于运行状态。系统最不愿意回收的就是处于运行状态的活动，因为这会带来非常差的用户体验。</p>
@@ -244,7 +243,7 @@
 <p>活动在 onStart()方法和 onStop()方法之间所经历的，就是可见生存期。在可见生存 期内，活动对于用户总是可见的，即便有可能无法和用户进行交互。我们可以通过这两 个方法，合理地管理那些对用户可见的资源。比如在 onStart()方法中对资源进行加载， 而在 onStop()方法中对资源进行释放，从而保证处于停止状态的活动不会占用过多内存。</p>
 <p>3、前台生存期</p>
 <p>活动在 onResume()方法和 onPause()方法之间所经历的，就是前台生存期。在前台 生存期内，活动总是处于运行状态的，此时的活动是可以和用户进行相互的，我们平时 看到和接触最多的也这个状态下的活动。</p>
-<p><img src="https://images2015.cnblogs.com/blog/15207/201512/15207-20151230134402026-2097191680.jpg" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/zjhzxy/Pic/master/Android%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg" alt="image"></p>
 
       
 
