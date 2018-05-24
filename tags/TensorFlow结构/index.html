@@ -6,23 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Android Activity活动的生命周期 | RN anywhere</title>
+  <title>Tag: TensorFlow结构 | RN anywhere</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="返回栈Android中的活动是可以层叠的，我们每启动一个新的活动，就会覆盖在原活动之上，然后点击Back键会销毁最上面的活动，下面的一个活动就会重新显示出来。 Android 是使用任务（Task）来管理活动的，一个任务就是一组存放在栈里的活动 的集合，这个栈也被称作返回栈（Back Stack）。栈是一种后进先出的数据结构，在默认情况 下，每当我们启动了一个新的活动，它会在返回栈中入栈，并处于栈">
-<meta name="keywords" content="Android,Activity生命周期,移动端">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Android Activity活动的生命周期">
-<meta property="og:url" content="http://yoursite.com/2018/05/22/Android-Activity活动的生命周期/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="RN anywhere">
+<meta property="og:url" content="http://yoursite.com/tags/TensorFlow结构/index.html">
 <meta property="og:site_name" content="RN anywhere">
-<meta property="og:description" content="返回栈Android中的活动是可以层叠的，我们每启动一个新的活动，就会覆盖在原活动之上，然后点击Back键会销毁最上面的活动，下面的一个活动就会重新显示出来。 Android 是使用任务（Task）来管理活动的，一个任务就是一组存放在栈里的活动 的集合，这个栈也被称作返回栈（Back Stack）。栈是一种后进先出的数据结构，在默认情况 下，每当我们启动了一个新的活动，它会在返回栈中入栈，并处于栈">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://raw.githubusercontent.com/zjhzxy/Pic/master/%E8%BF%94%E5%9B%9E%E6%A0%88.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/zjhzxy/Pic/master/Android%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg">
-<meta property="og:updated_time" content="2018-05-22T09:25:16.653Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Activity活动的生命周期">
-<meta name="twitter:description" content="返回栈Android中的活动是可以层叠的，我们每启动一个新的活动，就会覆盖在原活动之上，然后点击Back键会销毁最上面的活动，下面的一个活动就会重新显示出来。 Android 是使用任务（Task）来管理活动的，一个任务就是一组存放在栈里的活动 的集合，这个栈也被称作返回栈（Back Stack）。栈是一种后进先出的数据结构，在默认情况 下，每当我们启动了一个新的活动，它会在返回栈中入栈，并处于栈">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/zjhzxy/Pic/master/%E8%BF%94%E5%9B%9E%E6%A0%88.jpg">
+<meta name="twitter:title" content="RN anywhere">
   
     <link rel="alternative" href="/atom.xml" title="RN anywhere" type="application/atom+xml">
   
@@ -163,267 +155,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Android-Activity活动的生命周期" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Android Activity活动的生命周期
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/05/24/TensorFlow基本概念/" class="archive-article-date">
+  	<time datetime="2018-05-24T06:57:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/05/24/TensorFlow基本概念/">TensorFlow基本概念</a>
     </h1>
   
 
-        
-        <a href="/2018/05/22/Android-Activity活动的生命周期/" class="archive-article-date">
-  	<time datetime="2018-05-22T09:03:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-22</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-          <span class="btn-bg"></span>
-          <span class="btn-text">文章导航</span>
-          </p>
-    <div id="toc-article" class="toc-article">
-        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-        <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#返回栈"><span class="toc-number">1.</span> <span class="toc-text">返回栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#活动的状态"><span class="toc-number">2.</span> <span class="toc-text">活动的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#活动的生存周期"><span class="toc-number">3.</span> <span class="toc-text">活动的生存周期</span></a></li></ol>
-         </div>
-   <script type="text/javascript">
-    function showToc(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:block");
-        show_toc_btn.setAttribute("style","display:none");
-        };
-    function showBtn(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:none");
-        show_toc_btn.setAttribute("style","display:block");
-        };
-   </script>
-      
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="返回栈"><a href="#返回栈" class="headerlink" title="返回栈"></a>返回栈</h3><p>Android中的活动是可以层叠的，我们每启动一个新的活动，就会覆盖在原活动之上，然后点击Back键会销毁最上面的活动，下面的一个活动就会重新显示出来。</p>
-<p>Android 是使用任务（Task）来管理活动的，一个任务就是一组存放在栈里的活动 的集合，这个栈也被称作返回栈（Back Stack）。栈是一种后进先出的数据结构，在默认情况 下，每当我们启动了一个新的活动，它会在返回栈中入栈，并处于栈顶的位置。而每当我们 按下 Back 键或调用 finish()方法去销毁一个活动时，处于栈顶的活动会出栈，这时前一个入 栈的活动就会重新处于栈顶的位置。系统总是会显示处于栈顶的活动给用户。<br><a id="more"></a><br><img src="https://raw.githubusercontent.com/zjhzxy/Pic/master/%E8%BF%94%E5%9B%9E%E6%A0%88.jpg" alt="image"></p>
-<h3 id="活动的状态"><a href="#活动的状态" class="headerlink" title="活动的状态"></a>活动的状态</h3><p>每个活动在其生命周期中最多可能会有四种状态。</p>
-<p>1、运行状态</p>
-<p>当一个活动位于返回栈的栈顶时，这时活动就处于运行状态。系统最不愿意回收的就是处于运行状态的活动，因为这会带来非常差的用户体验。</p>
-<p>2、暂停状态</p>
-<p>当一个活动不再处于栈顶位置，但仍然可见时，这时活动就进入了暂停状态。你可能会觉得既然活动已经不在栈顶了，还怎么会可见呢？这是因为并不是每一个活动都会 占满整个屏幕的，比如对话框形式的活动只会占用屏幕中间的部分区域，你很快就会在 后面看到这种活动。处于暂停状态的活动仍然是完全存活着的，系统也不愿意去回收这 种活动（因为它还是可见的，回收可见的东西都会在用户体验方面有不好的影响），只 有在内存极低的情况下，系统才会去考虑回收这种活动。</p>
-<p>3、停止状态</p>
-<p>当一个活动不再处于栈顶位置，并且完全不可见的时候，就进入了停止状态。系统仍然会为这种活动保存相应的状态和成员变量，但是这并不是完全可靠的，当其他地方 需要内存时，处于停止状态的活动有可能会被系统回收。</p>
-<p>4、销毁状态</p>
-<p>当一个活动从返回栈中移除后就变成了销毁状态。系统会最倾向于回收处于这种状态的活动，从而保证手机的内存充足。</p>
-<h3 id="活动的生存周期"><a href="#活动的生存周期" class="headerlink" title="活动的生存周期"></a>活动的生存周期</h3><p>Activity 类中定义了七个回调方法，覆盖了活动生命周期的每一个环节，下面我来一一 介绍下这七个方法。</p>
-<p>1、onCreate()</p>
-<p>这个方法你已经看到过很多次了，每个活动中我们都重写了这个方法，它会在活动 第一次被创建的时候调用。你应该在这个方法中完成活动的初始化操作，比如说加载布 局、绑定事件等。</p>
-<p>2、onStart()</p>
-<p>这个方法在活动由不可见变为可见的时候调用。</p>
-<p>3、onResume()</p>
-<p>这个方法在活动准备好和用户进行交互的时候调用。此时的活动一定位于返回栈的 栈顶，并且处于运行状态。</p>
-<p>4、onPause()</p>
-<p>这个方法在系统准备去启动或者恢复另一个活动的时候调用。我们通常会在这个方 法中将一些消耗 CPU 的资源释放掉，以及保存一些关键数据，但这个方法的执行速度 一定要快，不然会影响到新的栈顶活动的使用。</p>
-<p>5、onStop()</p>
-<p>这个方法在活动完全不可见的时候调用。它和 onPause()方法的主要区别在于，如果启动的新活动是一个对话框式的活动，那么 onPause()方法会得到执行，而 onStop()方法并不会执行。</p>
-<p>6、onDestroy()</p>
-<p>这个方法在活动被销毁之前调用，之后活动的状态将变为销毁状态。</p>
-<p>7、onRestart()</p>
-<font color="#00ced1" size="3">这个方法在活动由停止状态变为运行状态之前调用，也就是活动被重新启动了。 以上七个方法中除了 onRestart()方法，其他都是两两相对的，从而又可以将活动分为三种生存期。 </font>
-
-<p>1、完整生存期</p>
-<p>活动在 onCreate()方法和 onDestroy()方法之间所经历的，就是完整生存期。一般情 况下，一个活动会在 onCreate()方法中完成各种初始化操作，而在 onDestroy()方法中完 成释放内的操作。</p>
-<p>2、可见生存期</p>
-<p>活动在 onStart()方法和 onStop()方法之间所经历的，就是可见生存期。在可见生存 期内，活动对于用户总是可见的，即便有可能无法和用户进行交互。我们可以通过这两 个方法，合理地管理那些对用户可见的资源。比如在 onStart()方法中对资源进行加载， 而在 onStop()方法中对资源进行释放，从而保证处于停止状态的活动不会占用过多内存。</p>
-<p>3、前台生存期</p>
-<p>活动在 onResume()方法和 onPause()方法之间所经历的，就是前台生存期。在前台 生存期内，活动总是处于运行状态的，此时的活动是可以和用户进行相互的，我们平时 看到和接触最多的也这个状态下的活动。</p>
-<p><img src="https://raw.githubusercontent.com/zjhzxy/Pic/master/Android%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg" alt="image"></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://raw.githubusercontent.com/zjhzxy/BlogFootage/master/react%20native%20logo.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://raw.githubusercontent.com/zjhzxy/BlogFootage/master/react%20native%20logo.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TensorFlow</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Activity生命周期</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">移动端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">TensorFlow结构</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/22/Android-Activity活动的生命周期/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/05/24/TensorFlow基本概念/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          TensorFlow基本概念
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/05/16/Anaconda中Jupyter-Notebook默认工作路径修改/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Anaconda中Jupyter Notebook默认工作路径修改</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#返回栈"><span class="toc-number">1.</span> <span class="toc-text">返回栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#活动的状态"><span class="toc-number">2.</span> <span class="toc-text">活动的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#活动的生存周期"><span class="toc-number">3.</span> <span class="toc-text">活动的生存周期</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
+    </div></section>
   
 
-  
-
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -446,9 +235,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
