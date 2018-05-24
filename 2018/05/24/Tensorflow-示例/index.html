@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>TensorFlow基本概念 | RN anywhere</title>
+  <title>Tensorflow 示例 | RN anywhere</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.使用图（graphs)来表示计算任务2.在被称之为会话的（Session）的上下文（context）中执行图3.使用tensor表示数据4.通过变量（Variable）维护状态5.使用feed和fetch可以为任意的操作赋值或者从其中获取数据">
-<meta name="keywords" content="TensorFlow,TensorFlow结构">
+  <meta name="description" content="一个简单示例： 已知数据为： x_data 为 100 个随机离散点；  y_data 数据为：为一条直线，斜率为0.1，截距为0.2； 数学模型为：y_data = 0.1 * x_data + 0.2">
+<meta name="keywords" content="Tensorflow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TensorFlow基本概念">
-<meta property="og:url" content="http://yoursite.com/2018/05/24/TensorFlow基本概念/index.html">
+<meta property="og:title" content="Tensorflow 示例">
+<meta property="og:url" content="http://yoursite.com/2018/05/24/Tensorflow-示例/index.html">
 <meta property="og:site_name" content="RN anywhere">
-<meta property="og:description" content="1.使用图（graphs)来表示计算任务2.在被称之为会话的（Session）的上下文（context）中执行图3.使用tensor表示数据4.通过变量（Variable）维护状态5.使用feed和fetch可以为任意的操作赋值或者从其中获取数据">
+<meta property="og:description" content="一个简单示例： 已知数据为： x_data 为 100 个随机离散点；  y_data 数据为：为一条直线，斜率为0.1，截距为0.2； 数学模型为：y_data = 0.1 * x_data + 0.2">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://raw.githubusercontent.com/zjhzxy/Pic/master/TensorFlow%E7%BB%93%E6%9E%84.png">
-<meta property="og:updated_time" content="2018-05-24T07:11:47.206Z">
+<meta property="og:updated_time" content="2018-05-24T10:32:19.850Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TensorFlow基本概念">
-<meta name="twitter:description" content="1.使用图（graphs)来表示计算任务2.在被称之为会话的（Session）的上下文（context）中执行图3.使用tensor表示数据4.通过变量（Variable）维护状态5.使用feed和fetch可以为任意的操作赋值或者从其中获取数据">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/zjhzxy/Pic/master/TensorFlow%E7%BB%93%E6%9E%84.png">
+<meta name="twitter:title" content="Tensorflow 示例">
+<meta name="twitter:description" content="一个简单示例： 已知数据为： x_data 为 100 个随机离散点；  y_data 数据为：为一条直线，斜率为0.1，截距为0.2； 数学模型为：y_data = 0.1 * x_data + 0.2">
   
     <link rel="alternative" href="/atom.xml" title="RN anywhere" type="application/atom+xml">
   
@@ -162,58 +160,83 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-TensorFlow基本概念" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Tensorflow-示例" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      TensorFlow基本概念
+      Tensorflow 示例
     </h1>
   
 
         
-        <a href="/2018/05/24/TensorFlow基本概念/" class="archive-article-date">
-  	<time datetime="2018-05-24T06:57:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-24</time>
+        <a href="/2018/05/24/Tensorflow-示例/" class="archive-article-date">
+  	<time datetime="2018-05-24T10:13:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-24</time>
 </a>
         
       </header>
     
     <!-- 目录内容 -->
 
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-          <span class="btn-bg"></span>
-          <span class="btn-text">文章导航</span>
-          </p>
-    <div id="toc-article" class="toc-article">
-        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-        <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#TensorFlow结构"><span class="toc-number">1.</span> <span class="toc-text">TensorFlow结构</span></a></li></ol>
-         </div>
-   <script type="text/javascript">
-    function showToc(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:block");
-        show_toc_btn.setAttribute("style","display:none");
-        };
-    function showBtn(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:none");
-        show_toc_btn.setAttribute("style","display:block");
-        };
-   </script>
-      
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.使用图（graphs)来表示计算任务<br>2.在被称之为会话的（Session）的上下文（context）中执行图<br>3.使用tensor表示数据<br>4.通过变量（Variable）维护状态<br>5.使用feed和fetch可以为任意的操作赋值或者从其中获取数据</p>
+        <p>一个简单示例：</p>
+<p>已知数据为：</p>
+<p><code>x_data</code> 为 <code>100</code> 个随机离散点；</p>
+<p> <code>y_data</code> 数据为：为一条直线，斜率为0.1，截距为0.2；</p>
+<p>数学模型为：y_data = 0.1 * x_data + 0.2</p>
 <a id="more"></a>
-<p>TonsorFlow是一个编程系统，使用图（graphs)来表示计算任务，图（graphs）中的节点称之为op（operation），一个op获得0个或多个Tensor，执行计算，产生0个或多个Tensor。Tensor看作是一个n维的数组或列表。图必须在会话（Session）里被启动。</p>
-<h3 id="TensorFlow结构"><a href="#TensorFlow结构" class="headerlink" title="TensorFlow结构"></a>TensorFlow结构</h3><p><img src="https://raw.githubusercontent.com/zjhzxy/Pic/master/TensorFlow%E7%BB%93%E6%9E%84.png" alt="image"></p>
+<blockquote>
+<p>x_data = np.random.rand(100)</p>
+</blockquote>
+<p>y_data = x_data * 0.1 + 0.2</p>
+<p>现建立数学模型 <code>y</code>, <code>k</code>, <code>b</code>:</p>
+<p><code>k</code> 为随机数，初始值为 <code>0.0</code>；</p>
+<p><code>b</code> 为随机数，初始值为 <code>0.0</code>；</p>
+<p>令 <code>y = k * x_data + b</code>;</p>
+<p>现用已有的数据 <code>x_data</code> ， <code>y_data</code> 来训练模型 <code>y = k * x_data + b</code> 得出 <code>k</code> 和 <code>b</code>；</p>
+<blockquote>
+<p>#首先：构造二次代价函数：</p>
+</blockquote>
+<blockquote>
+<p>loss = tf.reduce_mean(tf.square(y_data -y))</p>
+</blockquote>
+<blockquote>
+<p>#定义一个梯度下降法来进行训练的优化器：</p>
+</blockquote>
+<blockquote>
+<p>optimizer = tf.train.GradientDescentOptimizer(0.1)</p>
+</blockquote>
+<blockquote>
+<p>#最小化代价函数：</p>
+</blockquote>
+<blockquote>
+<p>train = optimizer.minimize(loss)</p>
+</blockquote>
+<p>完整代码：</p>
+<pre><code>x_data = np.random.rand(100)
+y_data = x_data * 0.1 + 0.2
 
+k = tf.Variable(0.)
+b = tf.Variable(0.)
+y = k * x_data + b
+
+loss = tf.reduce_mean(tf.square(y_data-y))
+optimizer = tf.train.GradientDescentOptimizer(0.1)
+train = optimizer.minimize(loss)
+
+init = tf.global_variables_initializer()
+
+with tf.Session() as sess:
+sess.run(init)
+for step in range(201):
+    sess.run(train)
+    if (step%20==0):
+        print(step, sess.run([k, b]))
+</code></pre>
       
 
       
@@ -257,11 +280,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TensorFlow</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">TensorFlow结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Tensorflow</a>
         		</li>
       		
 		</ul>
@@ -317,7 +336,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/24/TensorFlow基本概念/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/24/Tensorflow-示例/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -331,18 +350,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/24/Tensorflow-示例/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Tensorflow 示例
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/22/Android-Activity活动的生命周期/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android Activity活动的生命周期</div>
+    <a href="/2018/05/24/TensorFlow基本概念/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">TensorFlow基本概念</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -361,19 +371,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#TensorFlow结构"><span class="toc-number">1.</span> <span class="toc-text">TensorFlow结构</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
