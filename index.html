@@ -157,6 +157,112 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MNIST-数据集分类简单版本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/25/MNIST-数据集分类简单版本/">MNIST 数据集分类简单版本</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/25/MNIST-数据集分类简单版本/" class="archive-article-date">
+  	<time datetime="2018-05-25T08:14:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-25</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>import tensorflow as tf
+from tensorflow.examples.tutorials.mnist import input_data
+
+#载入数据
+mnist = input_data.read_data_sets(&quot;MNIST_data&quot;, one_hot=True)
+#每个批次的大小
+batch_size = 100
+#计算一共有多少个批次
+n_batch = mnist.train.num_examples // batch_size
+
+#定义两placeholder
+x = tf.placeholder(tf.float32, [None, 784])
+y = tf.placeholder(tf.float32, [None, 10])
+
+#创建简单的神经网络
+W = tf.Variable(tf.zeros([784, 10]))
+b = tf.Variable(tf.zeros([10]))
+prediction = tf.nn.softmax(tf.matmul(x, W) + b)
+
+#二次代价函数
+loss = tf.reduce_mean(tf.square(y - prediction))
+#梯度下降法
+train_step = tf.train.GradientDescentOptimizer(0.2).minimize(loss)
+
+#初始化变量
+init = tf.global_variables_initializer()
+
+#结果存放在一个布尔型列表中
+correct_prediction = tf.equal(tf.arg_max(y, 1), tf.arg_max(prediction, 1)) #arg_max返回一维张量中最大的值坐在的位置
+#求准确率
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+
+with tf.Session() as sess:
+    sess.run(init)
+    for epoch in range(100):
+        for batch in range(n_batch):
+            batch_xs, batch_ys = mnist.train.next_batch(batch_size)
+            sess.run(train_step, feed_dict={x: batch_xs, y: batch_ys})
+
+        acc = sess.run(accuracy,feed_dict={x:mnist.test.images,y:mnist.test.labels})
+        print(&quot;Iter&quot; + str(epoch) + &quot;, Testing Accuracy &quot; + str(acc))
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/25/MNIST-数据集分类简单版本/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Tensorflow-示例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -837,10 +943,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">React native</a>
               </li>
              
@@ -870,6 +972,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1006,5 +1112,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
